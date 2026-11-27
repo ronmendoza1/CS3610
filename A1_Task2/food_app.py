@@ -12,23 +12,23 @@ class FoodApp:
         for name in product_names:
 
             name = name.strip().lower()
-
-            if name == "burger":
+            
+            if "burger" in name:
                 product = self.factory.create_burger(
                     10, 250, "Delicious Burger"
                 )
 
-            elif name == "pizza":
+            elif "pizza" in name:
                 product = self.factory.create_pizza(
                     15, 300, "Medium", "Delicious Pizza"
                 )
 
-            elif name == "noodles":
+            elif "noodles" in name:
                 product = self.factory.create_noodles(
                     12, 200, "Delicious Noodles"
                 )
 
-            elif name == "cutlet":
+            elif "cutlet" in name:
 
                 if isinstance(self.factory, NonVegProductFactory):
                     product = self.factory.create_cutlet(
