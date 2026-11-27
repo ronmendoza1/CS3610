@@ -1,15 +1,20 @@
 from abc import ABC, abstractmethod
-from burger import Burger
-from pizza import Pizza
-from noodles import Noodles
 
 
 class ProductFactory(ABC):
-    @abstractmethod
-    def createBurger(self, p, c, d) -> Burger: ...
 
     @abstractmethod
-    def createPizza(self, p, c, s, d) -> Pizza: ...
+    def create_burger(self, p, c, d):
+        pass
 
     @abstractmethod
-    def createNoodles(self, p, c, d) -> Noodles: ...
+    def create_pizza(self, p, c, s, d):
+        pass
+
+    @abstractmethod
+    def create_noodles(self, p, c, d):
+        pass
+
+    @abstractmethod
+    def create_cutlet(self, p, c, d):
+        pass

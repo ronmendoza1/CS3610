@@ -1,15 +1,17 @@
 from product_factory import ProductFactory
-from veg_burger import VegBurger
-from veg_pizza import VegPizza
-from veg_noodles import VegNoodles
+from products import VegBurger, VegPizza, VegNoodles
 
 
 class VegProductFactory(ProductFactory):
-    def createBurger(self, p, c, d) -> VegBurger:
+
+    def create_burger(self, p, c, d):
         return VegBurger(p, c, d)
 
-    def createPizza(self, p, c, s, d) -> VegPizza:
+    def create_pizza(self, p, c, s, d):
         return VegPizza(p, c, s, d)
 
-    def createNoodles(self, p, c, d) -> VegNoodles:
+    def create_noodles(self, p, c, d):
         return VegNoodles(p, c, d)
+
+    def create_cutlet(self, p, c, d):
+        raise ValueError("Vegetarian cutlet is unavailable.")
